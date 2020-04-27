@@ -39,9 +39,25 @@ songList.onclick = (e)=> {
 
 const playAudio = ()=> {
   if(player.readyState){
-    player.play
+    player.play()
   }
 }
 const pauseAudio = ()=> {
-  player.pause
+  player.pause()
+}
+
+const slider = document.getElementById('volumeSlider')
+slider.oninput = (e)=>{
+  const volume = e.target.value
+  player.volume = volume
+}
+
+const updateProgress = ()=>{
+  if(player.currentTime > 0){
+    const progressBar = document.getElementById('progress')
+    console.log(progressBar.value + " progress bar value")
+    console.log(player.currentTime + " current time")
+    console.log(player.duration + " duration")
+    progressBar.value = (player.currentTime / player.duration) * 100
+  }
 }

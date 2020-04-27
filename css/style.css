@@ -5,7 +5,7 @@
 }
 
 body{
-  background: linear-gradient(#c31432, #240b36);
+  background: linear-gradient(to top, #c31432, #240b36);
   font-size: 1.2em;
   width: 40%;
   margin: 5px auto;
@@ -41,7 +41,7 @@ li:hover, i:hover {
   border-radius: 10px;
   border: none;
   background-color: beige;
-  padding: 20px 50px;
+  padding: 5vh 50px;
   max-width: 40vw;
   margin-bottom: 3vh;
 }
@@ -54,4 +54,16 @@ i{
 .reference a{
   text-decoration: none;
   color: aquamarine;
+}
+
+#currentSong{
+  color: aquamarine;
+}
+#currentlyPlayingSong{
+  color: beige;
+}
+
+progress{
+  width: 80%;
+  margin: 10px;
 }
